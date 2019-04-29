@@ -2,6 +2,7 @@ relative_require("./piece.rb")
 
 class Board
 
+  attrreader :
   @@boardPositions
 
   #initialize board
@@ -12,7 +13,7 @@ class Board
   def move_piece(start_pos, end_pos)
     raise RuntimeError unless @@boardPosition[start_pos] != nil
     raise RuntimeError unless @@boardPosition[end_pos] == nil
-    @@boardPositions[start_pos], @@boardPositions[end_pos] = @@boardPositions
+    @@boardPositions[start_pos], @@boardPositions[end_pos] = @@boardPositions[end_pos], @@boardPoistions[start_pos]
   end
 
 
