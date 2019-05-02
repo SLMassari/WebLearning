@@ -1,0 +1,5 @@
+
+termux-fix-shebang bin/rails
+sed -i  '/tzinfo-data/d' Gemfile
+echo "gem 'tzinfo-data'" >> Gemfile
+bundle update
